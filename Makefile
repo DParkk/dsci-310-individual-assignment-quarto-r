@@ -23,7 +23,7 @@ docs/index.html: reports/qmd_example.html | docs
 	cp reports/qmd_example.html docs/index.html
 
 docs/index.pdf: reports/qmd_example.pdf | docs
-	cp reports/qmd_example.pdf docs/index.pdf
+	cp reports/qmd_example.tex docs/index.pdf
 
 # clean
 clean:
