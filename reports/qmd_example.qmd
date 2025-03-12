@@ -76,7 +76,7 @@ Additionally, note that in @tbl-horses_sd we consider the sample standard deviat
 knitr::include_graphics("../results/horse_pop_plot_largest_sd.png")
 ```
 
-In @fig-largest_sd_plot, we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
+In {@fig-largest_sd_plot}, we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
 
 # References
 ::: {#refs}
