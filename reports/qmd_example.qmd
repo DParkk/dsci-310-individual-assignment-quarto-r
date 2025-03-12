@@ -39,11 +39,11 @@ Horse population data were sourced from the
 The R programming language (@R) 
 and the following R packages were used to perform the analysis: 
 knitr [@knitr], tidyverse [@tidyverse], and Quarto (@Allaire_Quarto_2022).  
-*Note: this report is adapted from @timbers2020.*
+*Note: this report is adapted from @ttimbers-horses.*
 
 # Results
 
-```{r horse_plot, fig.cap="Horse populations for all provinces in Canada from 1906 - 1972.", fig.width=8, fig.height=5}
+```{horse_plot, fig.cap="Horse populations for all provinces in Canada from 1906 - 1972.", fig.width=8, fig.height=5}
 knitr::include_graphics("../results/horse_pops_plot.png")
 ```
 
