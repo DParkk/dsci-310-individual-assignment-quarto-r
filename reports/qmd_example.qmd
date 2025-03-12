@@ -32,13 +32,13 @@ between 1906 and 1972 for each province.
 
 Horse population data were sourced from the 
 [Government of Canada's Open Data website](http://open.canada.ca/en/open-data) 
-(@govcan2017a; @govcan2017b).
+[@horses1 and @horses2]
 
 # Methods
 
-The R programming language (@r2022) 
+The R programming language (@R) 
 and the following R packages were used to perform the analysis: 
-knitr (@xie2014), tidyverse (@wickham2017), and Quarto (@allaire2022).  
+knitr [@knitr], tidyverse [@tidyverse], and Quarto (@Allaire_Quarto_2022).  
 *Note: this report is adapted from @timbers2020.*
 
 # Results
@@ -47,7 +47,7 @@ knitr (@xie2014), tidyverse (@wickham2017), and Quarto (@allaire2022).
 knitr::include_graphics("../results/horse_pops_plot.png")
 ```
 
-We can see from @fig-horse_plot that Ontario, Saskatchewan, and Alberta 
+We can see from @fig-horse-pops that Ontario, Saskatchewan, and Alberta 
 have had the highest horse populations in Canada. 
 All provinces have had a decline in horse populations since 1940. 
 This is likely due to the rebound of the Canadian automotive industry 
@@ -58,7 +58,7 @@ to further support this hypothesis.
 
 Suppose we were interested in looking more closely at the province 
 with the highest spread (in terms of standard deviation) of horse populations. 
-We present the standard deviations in @tbl-horses_sd.
+We present the standard deviations in @tbl-std..
 
 ```{r horses_sd, table-cap: "Standard deviation of historical (1906-1972) horse populations for each Canadian province."}
 horses_sd_table <- read_csv("../results/horses_sd.csv")
@@ -70,14 +70,12 @@ Note that we define standard deviation (of a sample) as
 
 $$s = \sqrt{\frac{\sum_{i=1}^N (x_i - \overline{x})^2}{N-1} }$$
 
-Additionally, note that in @tbl-horses_sd we consider the sample standard deviation of the number of horses during the same time span as @fig-horse_plot.
+Additionally, note that in @tbl-std. we consider the sample standard deviation of the number of horses during the same time span as @fig-horse-pops.
 
 ```{r largest_sd_plot, fig.cap="Horse populations for the province with the largest standard deviation", fig.width=6, fig.height=4}
 knitr::include_graphics("../results/horse_pop_plot_largest_sd.png")
 ```
 
-In {@fig-largest_sd_plot}, we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
+In @fig-horse-pops2, we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
 
 # References
-::: {#refs}
-:::
