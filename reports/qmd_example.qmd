@@ -58,7 +58,7 @@ to further support this hypothesis.
 
 Suppose we were interested in looking more closely at the province 
 with the highest spread (in terms of standard deviation) of horse populations. 
-We present the standard deviations in @tbl-std..
+We present the standard deviations in @tbl-std.
 
 ```{r horses_sd, table-cap: "Standard deviation of historical (1906-1972) horse populations for each Canadian province."}
 horses_sd_table <- read_csv("../results/horses_sd.csv")

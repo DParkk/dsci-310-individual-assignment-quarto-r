@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
-</style>
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}</style>
 
 
 <script>/*!
@@ -3234,11 +3254,11 @@ window.Quarto = {
 </section>
 <section id="data" class="level1">
 <h1>Data</h1>
-<p>Horse population data were sourced from the <a href="http://open.canada.ca/en/open-data">Government of Canada’s Open Data website</a> (<span class="citation" data-cites="govcan2017a">(<a href="#ref-govcan2017a" role="doc-biblioref"><strong>govcan2017a?</strong></a>)</span>; <span class="citation" data-cites="govcan2017b">(<a href="#ref-govcan2017b" role="doc-biblioref"><strong>govcan2017b?</strong></a>)</span>).</p>
+<p>Horse population data were sourced from the <a href="http://open.canada.ca/en/open-data">Government of Canada’s Open Data website</a> <span class="citation" data-cites="horses1">Government of Canada (<a href="#ref-horses2" role="doc-biblioref">2017b</a>)</span></p>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
-<p>The R programming language (<span class="citation" data-cites="r2022">(<a href="#ref-r2022" role="doc-biblioref"><strong>r2022?</strong></a>)</span>) and the following R packages were used to perform the analysis: knitr (<span class="citation" data-cites="xie2014">(<a href="#ref-xie2014" role="doc-biblioref"><strong>xie2014?</strong></a>)</span>), tidyverse (<span class="citation" data-cites="wickham2017">(<a href="#ref-wickham2017" role="doc-biblioref"><strong>wickham2017?</strong></a>)</span>), and Quarto (<span class="citation" data-cites="allaire2022">(<a href="#ref-allaire2022" role="doc-biblioref"><strong>allaire2022?</strong></a>)</span>).<br>
+<p>The R programming language (<span class="citation" data-cites="R">R Core Team (<a href="#ref-R" role="doc-biblioref">2019</a>)</span>) and the following R packages were used to perform the analysis: knitr <span class="citation" data-cites="knitr">(<a href="#ref-knitr" role="doc-biblioref">Xie 2014</a>)</span>, tidyverse <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref">Wickham 2017</a>)</span>, and Quarto (<span class="citation" data-cites="Allaire_Quarto_2022">Allaire et al. (<a href="#ref-Allaire_Quarto_2022" role="doc-biblioref">2022</a>)</span>).<br>
 <em>Note: this report is adapted from <span class="citation" data-cites="timbers2020">(<a href="#ref-timbers2020" role="doc-biblioref"><strong>timbers2020?</strong></a>)</span>.</em></p>
 </section>
 <section id="results" class="level1">
@@ -3253,8 +3273,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>We can see from <strong>?@fig-horse_plot</strong> that Ontario, Saskatchewan, and Alberta have had the highest horse populations in Canada. All provinces have had a decline in horse populations since 1940. This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War. An interesting follow-up visualization would be car sales per year for each province over the time period visualized above to further support this hypothesis.</p>
-<p>Suppose we were interested in looking more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations in <strong>?@tbl-horses_sd</strong>.</p>
+<p>We can see from <strong>?@fig-horse-pops</strong> that Ontario, Saskatchewan, and Alberta have had the highest horse populations in Canada. All provinces have had a decline in horse populations since 1940. This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War. An interesting follow-up visualization would be car sales per year for each province over the time period visualized above to further support this hypothesis.</p>
+<p>Suppose we were interested in looking more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations in <strong>?@tbl-std</strong>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -3307,7 +3327,7 @@ window.Quarto = {
 </div>
 <p>Note that we define standard deviation (of a sample) as</p>
 <p><span class="math display">\[s = \sqrt{\frac{\sum_{i=1}^N (x_i - \overline{x})^2}{N-1} }\]</span></p>
-<p>Additionally, note that in <strong>?@tbl-horses_sd</strong> we consider the sample standard deviation of the number of horses during the same time span as <strong>?@fig-horse_plot</strong>.</p>
+<p>Additionally, note that in <strong>?@tbl-std</strong>. we consider the sample standard deviation of the number of horses during the same time span as <strong>?@fig-horse-pops</strong>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -3318,13 +3338,33 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>In <strong>?@fig-largest_sd_plot</strong>, we zoom in and look at the province of Saskatchewan, which had the largest spread of values in terms of standard deviation.</p>
+<p>In <strong>?@fig-horse-pops2</strong>, we zoom in and look at the province of Saskatchewan, which had the largest spread of values in terms of standard deviation.</p>
 </section>
-<section id="references" class="level1">
-<h1>References</h1>
+<section id="references" class="level1 unnumbered">
+
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Allaire_Quarto_2022" class="csl-entry" role="listitem">
+Allaire, J. J., Charles Teague, Carlos Scheidegger, Yihui Xie, and Christophe Dervieux. 2022. <span>“<span>Quarto</span>.”</span> <a href="https://doi.org/10.5281/zenodo.5960048">https://doi.org/10.5281/zenodo.5960048</a>.
+</div>
+<div id="ref-horses1" class="csl-entry" role="listitem">
+Government of Canada. 2017a. <span>“Horses, Number on Farms at June 1 and at December 1.”</span> Open Government - Open Data. <a href="https://open.canada.ca/data/en/dataset/a3ecf553-8ec4-4551-a0fe-8df1472c6cf7">https://open.canada.ca/data/en/dataset/a3ecf553-8ec4-4551-a0fe-8df1472c6cf7</a>.
+</div>
+<div id="ref-horses2" class="csl-entry" role="listitem">
+———. 2017b. <span>“Horses, Number on Farms at June 1, Farm Value Per Head and Total Farm Value.”</span> Open Government - Open Data. <a href="https://open.canada.ca/data/en/dataset/e175ef9c-98f0-49b3-8131-ca0e3895a0cb">https://open.canada.ca/data/en/dataset/e175ef9c-98f0-49b3-8131-ca0e3895a0cb</a>.
+</div>
+<div id="ref-R" class="csl-entry" role="listitem">
+R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-tidyverse" class="csl-entry" role="listitem">
+Wickham, Hadley. 2017. <em>Tidyverse: Easily Install and Load the ’Tidyverse’</em>. <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
+</div>
+<div id="ref-knitr" class="csl-entry" role="listitem">
+Xie, Yihui. 2014. <span>“Knitr: A Comprehensive Tool for Reproducible Research in <span>R</span>.”</span> In <em>Implementing Reproducible Computational Research</em>, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. <a href="http://www.crcpress.com/product/isbn/9781466561595">http://www.crcpress.com/product/isbn/9781466561595</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
